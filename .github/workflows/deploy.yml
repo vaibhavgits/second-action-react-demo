@@ -17,7 +17,8 @@ jobs:
       run: npm test
   #job2
   deploy: 
-    needs: test
+    # Use "needs" keyword if you want to run yur jobs sequentially
+    # needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
