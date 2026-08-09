@@ -11,7 +11,7 @@ jobs:
         # Since we are using ubuntu, NodeJS comes pre-installed with it
         # https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
       - name: Install NodeJS
-        uses: actions/setup-node
+        uses: actions/setup-node@v7
         with: 
           nodeVersion: 24
 
