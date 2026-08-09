@@ -13,7 +13,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node
         with: 
-          nodeVersion: 22
+          nodeVersion: 24
 
       - name: Install Dependencies
         run: npm ci
