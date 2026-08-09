@@ -1,21 +1,17 @@
-import { defineConfig } from "eslint/config";
 import js from "@eslint/js";
 import globals from "globals";
 
-export default defineConfig([
-  js.configs.recommended, // Applies standard ESLint recommendations
+export default [
+  js.configs.recommended, // Applies standard rules to your JS/JSX files
   {
-    files: ["**/*.{js,jsx}"],
+    // This tells ESLint exactly which file extensions to look for inside your folders
+    files: ["**/*.{js,jsx}"], 
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
-        ...globals.browser, // Enables browser variables like window and document
+        ...globals.browser,
       },
     },
-    rules: {
-      "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off",
-    },
   },
-]);
+];
